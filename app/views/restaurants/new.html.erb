@@ -1,0 +1,18 @@
+<div class="container padded">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <h2>New restaurant</h2>
+      <%= simple_form_for(@restaurant) do |f| %>
+        <%= f.error_notification %>
+
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :category %>
+        <%= f.input :phone_number %>
+
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

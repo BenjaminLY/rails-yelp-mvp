@@ -1,0 +1,15 @@
+<div class="container padded">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <h1>Add a review for "<%= @restaurant.name %>"</h1>
+      <%= simple_form_for [@restaurant, @review] do |f| %>
+        <%= f.error_notification %>
+
+        <%= f.input :content, placeholder: "Describe your experience" %>
+        <%= f.input :rating, collection: 0..5, prompt: "Choose a rating"%>
+
+        <%= f.button :submit, class: "btn btn-danger" %>
+      <% end %>
+    </div>
+  </div>
+</div>
